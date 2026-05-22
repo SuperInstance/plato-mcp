@@ -26,7 +26,9 @@ def test_app_exists():
 
 def test_mcp_tools_defined():
     expected = {"list_rooms", "read_tiles", "write_tile",
-                "query_health", "route_query", "search_tiles"}
+                "query_health", "route_query", "search_tiles",
+                "conservation_check", "memory_recall", "memory_remember",
+                "game_play"}
     assert set(MCP_TOOLS.keys()) == expected
 
 
@@ -98,7 +100,7 @@ async def test_tools_endpoint():
     assert r.status_code == 200
     data = r.json()
     assert "tools" in data
-    assert len(data["tools"]) == 6
+    assert len(data["tools"]) == 10
 
 
 @pytest.mark.asyncio
