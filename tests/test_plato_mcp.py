@@ -26,7 +26,9 @@ def test_app_exists():
 
 def test_mcp_tools_defined():
     expected = {"list_rooms", "read_tiles", "write_tile",
-                "query_health", "route_query", "search_tiles"}
+                "query_health", "route_query", "search_tiles",
+                "conservation_check", "memory_remember",
+                "memory_recall", "game_play"}
     assert set(MCP_TOOLS.keys()) == expected
 
 
