@@ -100,7 +100,7 @@ async def test_tools_endpoint():
     assert r.status_code == 200
     data = r.json()
     assert "tools" in data
-    assert len(data["tools"]) == 6
+    assert len(data["tools"]) == 10
 
 
 @pytest.mark.asyncio
